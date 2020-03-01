@@ -51,11 +51,8 @@ go = war.prepend("Biru muda")
 # lang = war.insert(2, "Jingga")
 print(war)
 
+# Menghapus Item List
 
-
-
-
-
-
-
-
+keluarga = ["Bapak", "Ibu", "Kakek", "Nenek", "Adik", "Kakak", "among"]
+del keluarga[6]
+print(keluarga)
