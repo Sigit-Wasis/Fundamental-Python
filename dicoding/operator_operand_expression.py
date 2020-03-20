@@ -16,11 +16,29 @@ print(b)
 + (tambah) => 3 + 5 = 8 dan 'a + b' = 'ab'
 - (kurang) => 40 - 10 = 30 dan tidak berlaku untuk string
 * (perkalian) => 2 * 5 = 10 dan 'la' * 3 menghasilkan 'lalala'
-/ (pembagian) => 
-** (pangkat)
-// (pembagian habis dibagi /div)
+/ (pembagian) => 10 / 5 = 2 
+** (pangkat) => 3 ** 4 = 81 dan untuk akar dua gunakan 0.5
+// (pembagian habis dibagi /div) => 13 // 3 = 4 
 % (modulus)
 """
 
-operator = 'la' * 3
-print(operator)
+perkalian = 'la' * 3
+print(perkalian)
+
+pangkat = 3 ** 4
+akardua = 2 ** 0.5
+print(pangkat)
+print(akardua)
+
+pembagians = 13 // 3
+bagis = 15 // 2
+print(pembagians)
+print(bagis)
+
+modulo = 15 % 2
+print(modulo)
+
+# OPERASI BIT
+
+
+
