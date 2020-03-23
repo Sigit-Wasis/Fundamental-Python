@@ -89,3 +89,20 @@ else:
     print('bilangan {} adalah nol'. format(a))
 
 # TERNARY OPERATOR
+""" Operator ternary juga dikenal sebagai ekspresi kondisional adalah operator yang mengevaluasi sesuatu berdasarkan 
+kondisi apakah benar atau salah. Itu ditambahkan ke Python di versi 2.5. Ini hanya memungkinkan untuk menguji suatu 
+kondisi dalam satu baris menggantikan multiline jika-jika membuat kode kompak. """
+
+# Program to demonstrate conditional operator
+a, b = 10, 20
+
+# Copy value of a in min if a < b else copy b
+min = a if a < b else b
+
+print(min)
+
+# ShortHand Ternary
+""" Digunakan untuk membantu developer dalam memeriksa apakah ada error atau tidak """
+output = None
+msg = output or "dalam perbaikan"
+print(msg)
