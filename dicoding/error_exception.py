@@ -17,3 +17,24 @@ File "<stdin>",
  	print('salah indentasi')
  	^
 IndentationError: unexpected indent
+
+# Kesalahan Sintaks pada While
+while True print('Hello World')
+	File "<stdin>",
+		while True print('Hello World')
+
+# ===================
+# PENGECUALIAN
+# ===================	
+
+print(angka)
+Traceback (most recent call last):
+	File "<stdin>", line 1, in <module>
+NameError: name 'angka' is note defined
+
+# Variable karena tidak sama
+bukan_angka = '1'
+bukan_angka + 2
+Traceback (most recent call last):
+ File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
