@@ -177,3 +177,15 @@ def sum(arg1, arg2):
 # panggil sum
 sum(10, 20)
 print('Outside the function Global: {}'.format(total))
+
+# Untuk mengenali variabel Global, tambahkan kata kunci (keyword) global saat memanggil nama variabel.
+total = 0 # This is global variabel
+# Fungsi didefiniskan di bawah ini
+def sum(arg1, arg2):
+	global total
+	total = arg1 + arg2 #variabel local total
+	print('Inside the function local total: ', total)
+	return total
+
+sum(10, 20)
+print('Outside the function (global) total: ', total)
