@@ -9,4 +9,3 @@ print('Maka jawabannya adalah: ERROR')
 # =-=-=-=-=-=-=-=-=-=-=-=
 # KUIS KEDUA
 # =-=-=-=-=-=-=-=-=-=-=-=
-

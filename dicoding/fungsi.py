@@ -154,3 +154,26 @@ printinfo(1, 2, 3)
 printinfo(i=7, j=8, k=9)
 printinfo(1, 2, j=8, k=9)
 printinfo(*(2, 3), **('i':7, 'j':8))
+
+
+# FUNGSI ANONIM
+""" Fungsi Anonim (anonymous) tidak dideklarasikan 
+seperti halnya fungsi pada umumnya dengan kata kunci def, melainkan menggunakan kata kunci (keyword) lambda. 
+"""
+sum = lambda arg1, arg2: arg1 + arg2;
+print('Value of total: ', sum(10, 20))
+print('Value of total: ', sum(100, 245))
+
+# CAKUPAN VARIABEL
+""" Cakupan variabel umumnya dibagi menjadi 2: Variabel Lokal dan Variabel Global"""
+
+# Example Code
+total = 0 # Ini variabel global
+def sum(arg1, arg2):
+	# tambahkan kedua parameter dan return
+	total = arg1 + arg2
+	print('Inside the function Local: {}'.format(total))
+	return total
+# panggil sum
+sum(10, 20)
+print('Outside the function Global: {}'.format(total))
