@@ -1,4 +1,7 @@
-# Example Class
+# ================================
+# Example Class of pythonindo.com
+# ================================
+
 class Karyawan():
 	"""docstring for Karyawan"""
 	jumlah_karyawan = 0

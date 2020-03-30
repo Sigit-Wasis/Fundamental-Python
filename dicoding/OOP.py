@@ -94,28 +94,85 @@ class Karyawati():
 	a = k.kali_angka(2, 3)
 	print(a)
 
-# Example @classmethod dan @staticmethod of Geeks for Geeks
-from datetime import date
+# =================================
+# MEKANISME PEWARISAN (INHERITANCE)
+# =================================
 
-class Person:
-	def __init__(self, name, age):	
-		self.name = name
-		self.age = age
+# Frasa kelas dasar adalah terjemahan dari bahasa inggris dari frasa base class.
+# Frasa kelas turunan adalah terjemahan dari bahasa inggris dari frasa derived class.
+# Frasa menimpa metode adalah terjemahan bahasa inggris dari frasa method override.
 
-	# metode kelas untuk membuat objek Person pada tahun kelahiran.
-	@classmethod
-	def fromBirthYear(cls, name, year):
-		return cls(name, date.today().year - year)
+class Kalkulator(object):
+	"""docstring for Kalkulator"""
+	def __init__(self, nilai=0):
+		self.nilai = nilai
 
-	# metode statis untuk memeriksa apakah Seseorang sudah dewasa atau tidak.
-	@staticmethod
-	def isAdult(age):
-		return age > 18
+	def tambah_angka(self, angka1, angka2):
+		self.nilai = angka1 + angka2
+		if self.nilai > 9: 
+			print('Melebihi batas angka: {}'.format(self.nilai))
+		return self.nilai	
 
-person1 = Person('Sigit', 19)
-person2 = Person.fromBirthYear('Sigit', 2001)
+# Mewarisi kelas KalkulatorKali dari Kalkulator
+class KalkulatorKali(Kalkulator):
 
-print person1.age
-print person2.age
+	def kali_angka(self, angka1, angka2):
+		self.nilai = angka1 * angka2
+		return self.nilai
 
-print Person.isAdult(19)
+	# Menimpa (Override) Metode dengan Nama yang Sama Dengan Kelas Dasar
+	# Maka method tambah_angka diatas diganti dengan dibawah ini
+	def tambah_angka(self, angka1, angka2)
+		self.nilai = angka1 + angka2
+		return self.nilai
+
+# Pemanggilan class KalkulatorKali
+kk = KalkulatorKali()
+a  = kk.kali_angka(2, 3)
+print(a)
+
+b  = kk.tambah_angka(5, 6)
+print(b)
+
+# ========================================================================
+# Pemanggilan Metode Kelas Dasar dari Kelas Turunan dengan Sintaksis Super
+# ========================================================================
+class KalkulatorTambah(Kalkulator):
+	""" contoh mewarisi kelas kalkulator sederhana """
+
+	def tambah_angka(self, angka1, angka2)
+		if angka1 + angka2 <= 9: # fitur ini sudah oke di kelas dasar, gunakan yang ada saja
+			super().tambah_angka(angka1, angka2) # panggil fungsi dari Kalkulator lalu isi nilai
+		else: # ini adalah fitur baru yang ingin diperbaiki dari keterbatasan kelas dasar
+			self.nilai = angka1 + angka2
+		return self.nilai
+
+# Fungsi Super() of pythonindo.com
+# fungsi super mengembalikan attribute dan metode dari super objek (induk) suatu kelas.
+class Mamalia(object):
+	def __init__(self, mammalName):
+		print(mammalName, 'adalah hewan berdarah panas.')
+
+class kucing(Mamalia):
+	"""docstring for kucing"""
+	def __init__(self):
+		print("Kucing punya empat kaki.")
+		super().__init__('Kucing')
+
+m1 = Kucing()		
+
+# Jika Anda sebelumnya pernah belajar bahasa pemrograman yang memiliki variabel privat, 
+# dimana variabel tersebut tidak dapat diakses kecuali dari objek yang bersangkutan, di Python hal tersebut tidak ada.
+
+# ===================================
+# PERNAK PERNIK TERKAIT STRUKTUR DATA
+# ===================================
+class pegawai:
+	pass # definis kelas kosong
+
+don = Pegawai() # membuat pegawai baru menjadi objek bernama don
+
+# tambahkan item data data pada objek sebagai record
+don.nama = 'Sigit'
+don.bagian = 'Lampung'
+don.gaji = 20000000
